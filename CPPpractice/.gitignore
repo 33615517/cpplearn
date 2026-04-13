@@ -1,33 +1,49 @@
-# ===================== Visual Studio 核心缓存 =====================
+# VS2022 编译输出和缓存
 .vs/
-*.user
-*.suo
-*.db
-*.ipch
-*.sln.docstates
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
 
-# ===================== 编译产生的中间文件夹 =====================
+# 编译输出目录
 [Dd]ebug/
 [Rr]elease/
 x64/
 x86/
-[Bb]uild/
 [Bb]in/
 [Oo]bj/
 
-# ===================== 编译产生的临时/结果文件 =====================
-*.obj
+# 可执行文件和调试文件
 *.exe
 *.pdb
 *.ilk
+*.obj
 *.lib
 *.dll
-*.exp
-*.idb
-*.iobj
-*.ipdb
 
-# ===================== 系统垃圾（全平台通用） =====================
-Thumbs.db
-Desktop.ini
+# VS编译日志和临时文件
+*.tlog
+*.idb
+*.log
+*.recipe
+vc143.*
+
+# VS内部缓存
+**/CopilotIndices/
+**/FileContentIndex/
+**/v17/
+
+# 系统文件
 .DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.temp
+*.cache
+
+# 其他编译输出
+*.out
+*.o
+*.so
+*.a
