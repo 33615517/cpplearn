@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Binary Search Tree/Binary Search Tree.vcxproj" Id="fe2f21f8-ca20-4788-9399-97a62c04c54e" />
+  <Project Path="mapset/mapset.vcxproj" Id="2aa1a2ca-d32d-45ab-9cef-ac99db5cf1e8" />
 </Solution>
