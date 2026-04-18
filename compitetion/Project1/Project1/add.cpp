@@ -27,13 +27,6 @@ void Func(Person* ptr)
 }
 int main()
 {
-	// 其次多态不仅仅发生在派生类对象之间，多个派生类继承基类，重写虚函数后
-	// 多态也会发生在多个派生类之间。
-	Person ps;
-	Student st;
-	Soldier sr;
-	Func(&ps);
-	Func(&st);
-	Func(&sr);
+	
 	return 0;
 }
