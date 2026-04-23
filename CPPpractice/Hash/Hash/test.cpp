@@ -32,8 +32,6 @@ void test_set2()
 		//v.push_back(rand() + i); // 重复值相对少
 		v.push_back(i); // 没有重复，有序
 	}
-
-	// 21:15
 	size_t begin1 = clock();
 	for (auto e : v)
 	{

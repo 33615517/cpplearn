@@ -171,22 +171,22 @@ namespace open_adress
 }
 namespace hash_bucket
 {
-	template<class T>
+	template<class K, class V>
 	struct HashNode
 	{
-		T _data;
-		HashNode<T>* _next;
-		HashNode(const Date& data)
-			:_data(data)
+		pair<K, V> _kv;
+		HashNode<K, V>* _next;
+		HashNode(const pair<K, V>& kv)
+			:_kv(kv)
 			,_next(nullptr)
 		{
 		}
 	};
 
-	template<class K, class T,class KeyOfT, class Hash = HashFunc<K>>
+	template<class K, class V, class Hash = HashFunc<K>>
 	class HashTable
 	{
-		typedef HashNode<T> Node;
+		typedef HashNode<K, V> Node;
 	public:
 		HashTable()
 			:_tables(__stl_next_prime(0))
@@ -230,10 +230,9 @@ namespace hash_bucket
 				_tables[i] = nullptr;
 			}
 		}
-		bool Insert(const KeyOfT& data)
+		bool Insert(const pair<K, V>& kv)
 		{
-			KeyOfT kot;
-			if (Find(kot(data)))return false;
+			if (Find(kv.first))return false;
 			Hash hash;
 			// 负载因子 == 1时扩容
 			if (_n == _tables.size())
